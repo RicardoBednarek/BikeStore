@@ -18,3 +18,7 @@ São realizadas as seguintes consultas:
 ## Linguagem utilizada
 
 Para este projeto, foi utilizada a linguagem SQL.
+
+## Como usar este projeto
+
+Clonar o projeto e executar as queries na base de dados referente.
