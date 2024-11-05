@@ -4,6 +4,6 @@ SET @order_id = 1
 
 SELECT *
 FROM
-	staffs
+	sales.staffs
 WHERE
-	staff_id NOT IN (SELECT staff_id FROM orders WHERE order_id = @order_id)
+	staff_id NOT IN (SELECT staff_id FROM sales.orders WHERE order_id = @order_id)

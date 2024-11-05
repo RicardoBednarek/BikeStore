@@ -5,11 +5,11 @@ SET @brand_id = 1
 SELECT 
 	B.brand_name, S.store_name, COUNT(1) AS sales_quantity
 FROM
-	brands B
-	INNER JOIN roducts P ON P.brand_id = B.brand_id
-	INNER JOIN order_items OI ON OI.product_id = P.product_id
-	INNER JOIN orders O ON O.order_id = OI.order_id
-	INNER JOIN stores S ON S.store_id = O.order_id
+	production.brands B
+	INNER JOIN production.products P ON P.brand_id = B.brand_id
+	INNER JOIN sales.order_items OI ON OI.product_id = P.product_id
+	INNER JOIN sales.orders O ON O.order_id = OI.order_id
+	INNER JOIN sales.stores S ON S.store_id = O.order_id
 WHERE
 	B.brand_id = @brand_id
 GROUP BY
